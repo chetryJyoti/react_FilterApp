@@ -1,0 +1,40 @@
+.listItem-wrap {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+img {
+    width: 40%;
+    border-radius: 10px;
+    height: 260px;
+    object-fit: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    align-items: center;
+}
+
+header span {
+    font-size: .7rem;
+    background-color: rgb(178, 246, 240);
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+footer {
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p:first-child span {
+    color: gray;
+    font-weight: 600;
+}

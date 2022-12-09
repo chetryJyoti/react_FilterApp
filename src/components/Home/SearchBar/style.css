@@ -1,0 +1,27 @@
+.searchBar-wrap {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding:.3rem;
+    margin: .8rem;
+    border: 1px solid #699BF7;
+    border-radius:10px;
+}
+
+.searchBar-icon {
+    color: #266df1;
+    margin:0 1rem;
+}
+
+.searchBar-wrap input {
+    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    width: 100%;
+  
+}
+
+.searchBar-wrap input::placeholder {
+    color: #266df1;
+    font-size: 1.4rem;
+}

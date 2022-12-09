@@ -1,0 +1,58 @@
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from"@mui/material/ToggleButtonGroup"
+import React from "react";
+import { makeStyles } from "@mui/styles";
+// props=>{options to use,active value,function}
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+    justifyContent: "space-between",
+    // padding:"1rem"
+  },
+  toggle: {
+    fontFamily: `'Raleway', sans-serif`,
+    fontSize: ".8rem",
+    border: "1px solid rgba(14, 1, 1, 0.959)",
+    borderRadius: "10px",
+    "&.MuiToggleButtonGroup-groupedHorizontal:not(:last-child)": {
+      borderRadius: "10px",
+    },
+    "&.MuiToggleButtonGroup-groupedHorizontal:not(:first-child)": {
+      borderRadius: "10px",
+      border: "1px solid rgba(0, 0, 0, 0.12)",
+    },
+    "&.Mui-selected": {
+      borderRadius: "10px",
+      background : "#000",
+      color: "#fff",
+    },
+    "&.MuiToggleButton-root": {
+      "&:hover": {
+        background: "#0e6bf6f9",
+        color: "#010500",
+      },
+    },
+  },
+});
+const FilterListToggle = ({ options, value, selectToggle }) => {
+  const classes = useStyles();
+  return (
+    <ToggleButtonGroup
+      value={value}
+      exclusive
+      onChange={selectToggle}
+      className={classes.root}
+    >
+      {options.map(({ label, id, value }) => (
+        <ToggleButton
+          className={classes.toggle}
+          key={id}
+          value={value}>
+          {label}
+        </ToggleButton>
+      ))}
+    </ToggleButtonGroup>
+  );
+};
+
+export default FilterListToggle;
