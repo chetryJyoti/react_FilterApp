@@ -1,0 +1,11 @@
+.empty-view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.empty-view img {
+    max-width: 500px;
+    width: 100%;
+}

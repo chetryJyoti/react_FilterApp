@@ -6,20 +6,18 @@ const ListItem = ({
   return (
     <div className="listItem-wrap">
       <img src={coverSrc} alt="" />
-      <div>
-        <header>
-          <h4>{title}</h4>
-          <span>{rating}⭐</span>
-        </header>
-        <footer>
-          <p>
-            <b>{serviceTime}</b> <span>Deliver fee ${deliveryFee}</span>
-          </p>
-          <p>
-            <b>${price}</b>
-          </p>
-        </footer>
-      </div>
+      <header>
+        <h4>{title}</h4>
+        <span>{rating}⭐</span>
+      </header>
+      <footer>
+        <p>
+          <b>{serviceTime}</b> <span>Deliver fee ${deliveryFee}</span>
+        </p>
+        <p>
+          <b>${price}</b>
+        </p>
+      </footer>
     </div>
   );
 };
